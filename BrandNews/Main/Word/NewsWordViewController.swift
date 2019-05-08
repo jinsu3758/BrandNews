@@ -10,11 +10,14 @@ import UIKit
 
 class NewsWordViewController: UIViewController {
     @IBOutlet weak var wordCollectionView: UICollectionView!
+    @IBOutlet weak var ovalView: UIView!
     
     private var wordList: [Word] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        ovalView.layer.cornerRadius = 9.3
+        wordCollectionView.register(UINib.init(nibName: "WordCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         if let flowLayout = self.wordCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         }
@@ -38,7 +41,6 @@ class NewsWordViewController: UIViewController {
         wordList.append(Word(sentence: "324", frequency: 70))
         wordCollectionView.reloadData()
     }
-    
 
 }
 
@@ -48,41 +50,17 @@ extension NewsWordViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        
-        if let sentenceLabel = cell.contentView.subviews.first as? UILabel {
-            sentenceLabel.text = wordList[indexPath.row].sentence
-            
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? WordCell {
             let frequencyList = wordList.map{$0.frequency}
-            let maxFrequency = frequencyList.max()
-            let minFrequency = frequencyList.min()
-            let maxFontSize:CGFloat = 36
-            let minFontSize:CGFloat = 12
-            let maxAlpha:CGFloat = 1
-            let minAlpha:CGFloat = 0.5
+            cell.fill(word: wordList[indexPath.row], frequencyList: frequencyList)
             
-            let fontSize = self.calculateItemValue(minValue: minFontSize, maxValue: maxFontSize, itemFrequency: wordList[indexPath.row].frequency, minFrequency: minFrequency!, maxFrequency: maxFrequency!)
-            sentenceLabel.font = sentenceLabel.font.withSize(fontSize)
-            
-            sentenceLabel.alpha = self.calculateItemValue(minValue: minAlpha, maxValue: maxAlpha, itemFrequency: wordList[indexPath.row].frequency, minFrequency: minFrequency!, maxFrequency: maxFrequency!)
+            return cell
         }
-        
-        return cell
+        return UICollectionViewCell()
     }
     
-    
-    
-    func calculateItemValue(minValue: CGFloat, maxValue: CGFloat, itemFrequency: Int, minFrequency: Int, maxFrequency: Int) -> CGFloat {
-        if maxFrequency == minFrequency {
-            return (maxValue + minValue)/2
-        }
-        let itemFrequency = CGFloat(itemFrequency)
-        let minFrequency = CGFloat(minFrequency)
-        let maxFrequency = CGFloat(maxFrequency)
-        
-        let a = (maxValue - minValue)/(maxFrequency-minFrequency)
-        let b = (maxFrequency*minValue-minFrequency*maxValue)/(maxFrequency - minFrequency)
-        return a*itemFrequency + b
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
     }
     
 }

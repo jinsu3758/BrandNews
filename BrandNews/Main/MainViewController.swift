@@ -10,6 +10,8 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var companyNameLabel: UILabel!
+    @IBOutlet weak var companyFieldLabel: UILabel!
     
     private var pageVC = UIPageViewController()
     

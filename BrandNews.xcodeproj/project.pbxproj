@@ -14,7 +14,7 @@
 		7435C18922828CC800EEE61F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7435C18722828CC800EEE61F /* LaunchScreen.storyboard */; };
 		7435C19422828CC800EEE61F /* BrandNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435C19322828CC800EEE61F /* BrandNewsTests.swift */; };
 		7435C19F22828CC800EEE61F /* BrandNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435C19E22828CC800EEE61F /* BrandNewsUITests.swift */; };
-		7435C1AE22828ED000EEE61F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435C1AD22828ED000EEE61F /* UIColor.swift */; };
+		7435C1AE22828ED000EEE61F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435C1AD22828ED000EEE61F /* Extension.swift */; };
 		7435C1B42282A63200EEE61F /* NewsWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435C1B32282A63200EEE61F /* NewsWordViewController.swift */; };
 		7435C1B62282B37100EEE61F /* BrandWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435C1B52282B37100EEE61F /* BrandWordViewController.swift */; };
 		7435C1B82282B85B00EEE61F /* WordCloudFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435C1B72282B85B00EEE61F /* WordCloudFlowLayout.swift */; };
@@ -22,6 +22,15 @@
 		7435C1BD2282BA2B00EEE61F /* MainDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435C1BC2282BA2B00EEE61F /* MainDataController.swift */; };
 		7435C1C02282E73E00EEE61F /* WordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7435C1BF2282E73E00EEE61F /* WordCell.xib */; };
 		7435C1C22282E75200EEE61F /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435C1C12282E75200EEE61F /* WordCell.swift */; };
+		7435C1CA2282F96B00EEE61F /* YDIYGO310.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 7435C1C92282F8F200EEE61F /* YDIYGO310.TTF */; };
+		7435C1CB2282F96E00EEE61F /* YDIYGO320.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 7435C1C72282F8F200EEE61F /* YDIYGO320.TTF */; };
+		7435C1CC2282F97000EEE61F /* YDIYGO330.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 7435C1C52282F8F200EEE61F /* YDIYGO330.TTF */; };
+		7435C1CD2282F97200EEE61F /* YDIYGO340.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 7435C1C42282F8F200EEE61F /* YDIYGO340.TTF */; };
+		7435C1CE2282F97400EEE61F /* YDIYGO350.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 7435C1C62282F8F200EEE61F /* YDIYGO350.TTF */; };
+		7435C1CF2282F97700EEE61F /* YDIYGO360.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7435C1C82282F8F200EEE61F /* YDIYGO360.ttf */; };
+		7435C1D12282F98400EEE61F /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435C1D02282F98400EEE61F /* Enums.swift */; };
+		7435C1D72282FAC600EEE61F /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435C1D62282FAC600EEE61F /* CircleView.swift */; };
+		7435C1D92282FDB500EEE61F /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435C1D82282FDB500EEE61F /* ShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +64,7 @@
 		7435C19A22828CC800EEE61F /* BrandNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrandNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7435C19E22828CC800EEE61F /* BrandNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandNewsUITests.swift; sourceTree = "<group>"; };
 		7435C1A022828CC800EEE61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7435C1AD22828ED000EEE61F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		7435C1AD22828ED000EEE61F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		7435C1B32282A63200EEE61F /* NewsWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWordViewController.swift; sourceTree = "<group>"; };
 		7435C1B52282B37100EEE61F /* BrandWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandWordViewController.swift; sourceTree = "<group>"; };
 		7435C1B72282B85B00EEE61F /* WordCloudFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCloudFlowLayout.swift; sourceTree = "<group>"; };
@@ -63,6 +72,15 @@
 		7435C1BC2282BA2B00EEE61F /* MainDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataController.swift; sourceTree = "<group>"; };
 		7435C1BF2282E73E00EEE61F /* WordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordCell.xib; sourceTree = "<group>"; };
 		7435C1C12282E75200EEE61F /* WordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
+		7435C1C42282F8F200EEE61F /* YDIYGO340.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = YDIYGO340.TTF; path = "../../../../폰트/YDIYGO340.TTF"; sourceTree = "<group>"; };
+		7435C1C52282F8F200EEE61F /* YDIYGO330.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = YDIYGO330.TTF; path = "../../../../폰트/YDIYGO330.TTF"; sourceTree = "<group>"; };
+		7435C1C62282F8F200EEE61F /* YDIYGO350.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = YDIYGO350.TTF; path = "../../../../폰트/YDIYGO350.TTF"; sourceTree = "<group>"; };
+		7435C1C72282F8F200EEE61F /* YDIYGO320.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = YDIYGO320.TTF; path = "../../../../폰트/YDIYGO320.TTF"; sourceTree = "<group>"; };
+		7435C1C82282F8F200EEE61F /* YDIYGO360.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = YDIYGO360.ttf; path = "../../../../폰트/YDIYGO360.ttf"; sourceTree = "<group>"; };
+		7435C1C92282F8F200EEE61F /* YDIYGO310.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = YDIYGO310.TTF; path = "../../../../폰트/YDIYGO310.TTF"; sourceTree = "<group>"; };
+		7435C1D02282F98400EEE61F /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		7435C1D62282FAC600EEE61F /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		7435C1D82282FDB500EEE61F /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,20 +131,15 @@
 		7435C17D22828CC700EEE61F /* BrandNews */ = {
 			isa = PBXGroup;
 			children = (
+				7435C18A22828CC800EEE61F /* Info.plist */,
+				7435C1D52282FAB000EEE61F /* Custom */,
+				7435C1D32282FA8100EEE61F /* Common */,
+				7435C1D22282FA6D00EEE61F /* Main */,
+				7435C1C32282F8DF00EEE61F /* Fonts */,
 				7435C1B92282B91800EEE61F /* Model */,
 				7435C1AC22828EBD00EEE61F /* Util */,
-				7435C17E22828CC700EEE61F /* AppDelegate.swift */,
-				7435C18022828CC700EEE61F /* MainViewController.swift */,
-				7435C18222828CC700EEE61F /* Main.storyboard */,
 				7435C18522828CC800EEE61F /* Assets.xcassets */,
 				7435C18722828CC800EEE61F /* LaunchScreen.storyboard */,
-				7435C18A22828CC800EEE61F /* Info.plist */,
-				7435C1B32282A63200EEE61F /* NewsWordViewController.swift */,
-				7435C1B52282B37100EEE61F /* BrandWordViewController.swift */,
-				7435C1B72282B85B00EEE61F /* WordCloudFlowLayout.swift */,
-				7435C1BC2282BA2B00EEE61F /* MainDataController.swift */,
-				7435C1BF2282E73E00EEE61F /* WordCell.xib */,
-				7435C1C12282E75200EEE61F /* WordCell.swift */,
 			);
 			path = BrandNews;
 			sourceTree = "<group>";
@@ -152,7 +165,8 @@
 		7435C1AC22828EBD00EEE61F /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				7435C1AD22828ED000EEE61F /* UIColor.swift */,
+				7435C1AD22828ED000EEE61F /* Extension.swift */,
+				7435C1D02282F98400EEE61F /* Enums.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -163,6 +177,59 @@
 				7435C1BA2282B9DD00EEE61F /* Word.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7435C1C32282F8DF00EEE61F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7435C1C92282F8F200EEE61F /* YDIYGO310.TTF */,
+				7435C1C72282F8F200EEE61F /* YDIYGO320.TTF */,
+				7435C1C52282F8F200EEE61F /* YDIYGO330.TTF */,
+				7435C1C42282F8F200EEE61F /* YDIYGO340.TTF */,
+				7435C1C62282F8F200EEE61F /* YDIYGO350.TTF */,
+				7435C1C82282F8F200EEE61F /* YDIYGO360.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7435C1D22282FA6D00EEE61F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7435C1D42282FA9B00EEE61F /* Word */,
+				7435C18022828CC700EEE61F /* MainViewController.swift */,
+				7435C1BC2282BA2B00EEE61F /* MainDataController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7435C1D32282FA8100EEE61F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7435C18222828CC700EEE61F /* Main.storyboard */,
+				7435C17E22828CC700EEE61F /* AppDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7435C1D42282FA9B00EEE61F /* Word */ = {
+			isa = PBXGroup;
+			children = (
+				7435C1B32282A63200EEE61F /* NewsWordViewController.swift */,
+				7435C1B52282B37100EEE61F /* BrandWordViewController.swift */,
+				7435C1B72282B85B00EEE61F /* WordCloudFlowLayout.swift */,
+				7435C1BF2282E73E00EEE61F /* WordCell.xib */,
+				7435C1C12282E75200EEE61F /* WordCell.swift */,
+			);
+			path = Word;
+			sourceTree = "<group>";
+		};
+		7435C1D52282FAB000EEE61F /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				7435C1D62282FAC600EEE61F /* CircleView.swift */,
+				7435C1D82282FDB500EEE61F /* ShadowView.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,9 +336,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7435C1CA2282F96B00EEE61F /* YDIYGO310.TTF in Resources */,
+				7435C1CB2282F96E00EEE61F /* YDIYGO320.TTF in Resources */,
 				7435C18922828CC800EEE61F /* LaunchScreen.storyboard in Resources */,
+				7435C1CC2282F97000EEE61F /* YDIYGO330.TTF in Resources */,
 				7435C1C02282E73E00EEE61F /* WordCell.xib in Resources */,
+				7435C1CD2282F97200EEE61F /* YDIYGO340.TTF in Resources */,
 				7435C18622828CC800EEE61F /* Assets.xcassets in Resources */,
+				7435C1CF2282F97700EEE61F /* YDIYGO360.ttf in Resources */,
+				7435C1CE2282F97400EEE61F /* YDIYGO350.TTF in Resources */,
 				7435C18422828CC700EEE61F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,12 +370,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7435C1D92282FDB500EEE61F /* ShadowView.swift in Sources */,
 				7435C1B62282B37100EEE61F /* BrandWordViewController.swift in Sources */,
 				7435C1BB2282B9DD00EEE61F /* Word.swift in Sources */,
+				7435C1D12282F98400EEE61F /* Enums.swift in Sources */,
 				7435C1B82282B85B00EEE61F /* WordCloudFlowLayout.swift in Sources */,
 				7435C1C22282E75200EEE61F /* WordCell.swift in Sources */,
 				7435C18122828CC700EEE61F /* MainViewController.swift in Sources */,
-				7435C1AE22828ED000EEE61F /* UIColor.swift in Sources */,
+				7435C1D72282FAC600EEE61F /* CircleView.swift in Sources */,
+				7435C1AE22828ED000EEE61F /* Extension.swift in Sources */,
 				7435C17F22828CC700EEE61F /* AppDelegate.swift in Sources */,
 				7435C1BD2282BA2B00EEE61F /* MainDataController.swift in Sources */,
 				7435C1B42282A63200EEE61F /* NewsWordViewController.swift in Sources */,
