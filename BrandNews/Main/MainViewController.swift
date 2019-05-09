@@ -12,8 +12,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var companyFieldLabel: UILabel!
+    @IBOutlet weak var goodView: UIView!
+    @IBOutlet weak var badView: UIView!
+    @IBOutlet weak var badGoodView: UIView!
+    @IBOutlet weak var newsCollectionView: UICollectionView!
     
     private var pageVC = UIPageViewController()
+    var newsList: [NewsCard] = []
     
     lazy var pageArray: [UIViewController] = {
         return [getVC(name: "news"), getVC(name: "brand")]
@@ -27,7 +32,27 @@ class MainViewController: UIViewController {
         pageVC.delegate = self
         pageVC.dataSource = self
         pageControl.currentPage = pageArray.count
+        newsCollectionView.register(UINib(nibName: "GoodNewsCell", bundle: nil), forCellWithReuseIdentifier: "mainNewsCell")
+        if let flowLayout = newsCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
+        newsCollectionView.delegate = self
+        newsCollectionView.dataSource = self
     }
+    
+//    override func viewDidLayoutSubviews() {
+//        let goodGradientLayer = CAGradientLayer()
+//        let badGradientLayer = CAGradientLayer()
+//        goodGradientLayer.cornerRadius = 10
+//        badGradientLayer.cornerRadius = 10
+//        goodGradientLayer.frame = goodView.bounds
+//        goodGradientLayer.colors = [UIColor.sapphire.cgColor, UIColor.darkSkyBlue.cgColor]
+//        badGradientLayer.frame = badView.bounds
+//        badGradientLayer.colors = [UIColor.vermillion.cgColor, UIColor.orange.cgColor]
+//        goodView.layer.addSublayer(goodGradientLayer)
+//        badView.layer.addSublayer(badGradientLayer)
+//        goodView.layer.cornerRadius = 10
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let container = segue.destination as? UIPageViewController {
@@ -72,6 +97,21 @@ extension MainViewController: UIPageViewControllerDelegate, UIPageViewController
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return 0
+    }
+    
+    
+}
+
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return newsList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mainNewsCell", for: indexPath)
+        if let goodCell = cell as? GoodNewsCell {
+            goodCell
+        }
     }
     
     

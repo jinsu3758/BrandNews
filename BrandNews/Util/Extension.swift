@@ -51,6 +51,22 @@ extension UIColor {
         return UIColor(red: 254, green: 88, blue: 88)
     }
     
+    class var sapphire: UIColor {
+        return UIColor(red: 29, green: 36, blue: 167)
+    }
+    
+    class var darkSkyBlue: UIColor {
+        return UIColor(red: 35, green: 137, blue: 223)
+    }
+    
+    class var vermillion: UIColor {
+        return UIColor(red: 222, green: 14, blue: 14)
+    }
+    
+    class var orange: UIColor {
+        return UIColor(red: 245, green: 96, blue: 6)
+    }
+    
 }
 
 extension CALayer {
@@ -68,6 +84,15 @@ extension CALayer {
             
             shadowPath = UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).cgPath
         }
+    }
+}
+
+extension UIView {
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
     }
 }
 

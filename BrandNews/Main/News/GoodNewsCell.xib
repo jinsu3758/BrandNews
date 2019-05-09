@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="YDIYGO340.TTF">
+            <string>YDIYGO340</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tJd-ao-3ip" customClass="GoodNewsCell" customModule="BrandNews" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="135"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="288" height="135"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hvx-eh-LQx">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="135"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61A-UL-1u0">
+                                <rect key="frame" x="0.0" y="0.0" width="9" height="135"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leftNews" translatesAutoresizingMaskIntoConstraints="NO" id="MXc-0E-oMt">
+                                        <rect key="frame" x="1.5" y="10" width="7.5" height="8.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="8.5" id="GDP-US-oWt"/>
+                                            <constraint firstAttribute="width" constant="7.5" id="jTo-e6-qwe"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="MXc-0E-oMt" firstAttribute="top" secondItem="61A-UL-1u0" secondAttribute="top" constant="10" id="XkX-DY-qOn"/>
+                                    <constraint firstAttribute="width" constant="9" id="h9T-58-IvJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="MXc-0E-oMt" secondAttribute="trailing" id="m6D-gZ-K9k"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UBV-a4-8qP">
+                                <rect key="frame" x="9" y="14.5" width="279" height="120.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lXZ-uE-3sd">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19.04.17" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHX-EX-ayE">
+                                <rect key="frame" x="9" y="0.0" width="36" height="10"/>
+                                <fontDescription key="fontDescription" name="YDIYGO340" family="YDIYGO340" pointSize="9"/>
+                                <color key="textColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="61A-UL-1u0" firstAttribute="top" secondItem="Hvx-eh-LQx" secondAttribute="top" id="0lp-NQ-Muy"/>
+                            <constraint firstAttribute="trailing" secondItem="UBV-a4-8qP" secondAttribute="trailing" id="0nr-Uq-vGU"/>
+                            <constraint firstItem="UBV-a4-8qP" firstAttribute="leading" secondItem="61A-UL-1u0" secondAttribute="trailing" id="DVB-8f-oLg"/>
+                            <constraint firstAttribute="bottom" secondItem="61A-UL-1u0" secondAttribute="bottom" id="GwY-GS-uoC"/>
+                            <constraint firstItem="61A-UL-1u0" firstAttribute="leading" secondItem="Hvx-eh-LQx" secondAttribute="leading" id="Jey-XP-gZL"/>
+                            <constraint firstItem="oHX-EX-ayE" firstAttribute="top" secondItem="Hvx-eh-LQx" secondAttribute="top" id="O9O-vs-Dqu"/>
+                            <constraint firstItem="UBV-a4-8qP" firstAttribute="top" secondItem="oHX-EX-ayE" secondAttribute="bottom" constant="4.5" id="W1Z-uB-Q54"/>
+                            <constraint firstAttribute="bottom" secondItem="UBV-a4-8qP" secondAttribute="bottom" id="kZ2-8j-Gkc"/>
+                            <constraint firstItem="oHX-EX-ayE" firstAttribute="leading" secondItem="61A-UL-1u0" secondAttribute="trailing" id="yKs-0n-O2V"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Hvx-eh-LQx" firstAttribute="leading" secondItem="tJd-ao-3ip" secondAttribute="leading" id="2kr-BD-kK1"/>
+                <constraint firstAttribute="bottom" secondItem="Hvx-eh-LQx" secondAttribute="bottom" id="M2o-7y-ig8"/>
+                <constraint firstAttribute="trailing" secondItem="Hvx-eh-LQx" secondAttribute="trailing" id="nA9-N7-1JJ"/>
+                <constraint firstItem="Hvx-eh-LQx" firstAttribute="top" secondItem="tJd-ao-3ip" secondAttribute="top" id="vF7-LW-Vj6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="4Gk-5h-hvQ"/>
+            <size key="customSize" width="288" height="135"/>
+            <connections>
+                <outlet property="dateLabel" destination="oHX-EX-ayE" id="sof-WI-mKE"/>
+                <outlet property="leftView" destination="61A-UL-1u0" id="tKI-qF-DuN"/>
+                <outlet property="newsCollectionView" destination="UBV-a4-8qP" id="iPi-4D-vIx"/>
+            </connections>
+            <point key="canvasLocation" x="182.60869565217394" y="134.26339285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="leftNews" width="8.5" height="9.5"/>
+    </resources>
+</document>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="YDIYGO310.TTF">
+            <string>YDIYGO310</string>
+        </array>
+        <array key="YDIYGO340.TTF">
+            <string>YDIYGO340</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NewsCell" customModule="BrandNews" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="294" height="38"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="네이버, LG유플러스와 AI기술로 사회적약자 돕는다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="gYt-uY-FdS">
+                    <rect key="frame" x="6.5" y="5" width="213.5" height="11"/>
+                    <fontDescription key="fontDescription" name="YDIYGO340" family="YDIYGO340" pointSize="10"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터넷" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="zKK-86-qer">
+                    <rect key="frame" x="6.5" y="21" width="37" height="10.5"/>
+                    <fontDescription key="fontDescription" name="YDIYGO310" family="YDIYGO310" pointSize="10"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gYt-uY-FdS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="B3Z-Dc-jzE"/>
+                <constraint firstAttribute="bottom" secondItem="zKK-86-qer" secondAttribute="bottom" constant="6.5" id="D7P-HG-rDn"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gYt-uY-FdS" secondAttribute="trailing" constant="5" id="NMm-5J-BgZ"/>
+                <constraint firstItem="gYt-uY-FdS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="6.5" id="QHe-t5-I2t"/>
+                <constraint firstItem="zKK-86-qer" firstAttribute="top" secondItem="gYt-uY-FdS" secondAttribute="bottom" constant="5" id="e45-Cl-W4y"/>
+                <constraint firstItem="zKK-86-qer" firstAttribute="leading" secondItem="gYt-uY-FdS" secondAttribute="leading" id="xf0-x2-5gg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="companyLabel" destination="zKK-86-qer" id="ANY-c0-VHl"/>
+                <outlet property="titleLabel" destination="gYt-uY-FdS" id="mOa-DH-fNg"/>
+            </connections>
+            <point key="canvasLocation" x="39.130434782608695" y="-133.92857142857142"/>
+        </view>
+    </objects>
+</document>
