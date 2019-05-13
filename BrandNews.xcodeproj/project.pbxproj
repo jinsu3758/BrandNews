@@ -39,6 +39,8 @@
 		7435C1E622840E7400EEE61F /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435C1E522840E7400EEE61F /* NewsCell.swift */; };
 		7435C1E822840FB500EEE61F /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435C1E722840FB500EEE61F /* News.swift */; };
 		7435C1EA2284101C00EEE61F /* NewsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435C1E92284101C00EEE61F /* NewsCard.swift */; };
+		743D68D7228943AD00ECBD6E /* BadNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 743D68D6228943AD00ECBD6E /* BadNewsCell.xib */; };
+		743D68D9228943BA00ECBD6E /* BadNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743D68D8228943BA00ECBD6E /* BadNewsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		7435C1E522840E7400EEE61F /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		7435C1E722840FB500EEE61F /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		7435C1E92284101C00EEE61F /* NewsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCard.swift; sourceTree = "<group>"; };
+		743D68D6228943AD00ECBD6E /* BadNewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadNewsCell.xib; sourceTree = "<group>"; };
+		743D68D8228943BA00ECBD6E /* BadNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadNewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,8 @@
 				7435C1E12283DEC400EEE61F /* NewsHeaderView.xib */,
 				7435C1E322840D2F00EEE61F /* NewsCell.xib */,
 				7435C1E522840E7400EEE61F /* NewsCell.swift */,
+				743D68D6228943AD00ECBD6E /* BadNewsCell.xib */,
+				743D68D8228943BA00ECBD6E /* BadNewsCell.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -374,6 +380,7 @@
 				7435C18922828CC800EEE61F /* LaunchScreen.storyboard in Resources */,
 				7435C1CC2282F97000EEE61F /* YDIYGO330.TTF in Resources */,
 				7435C1DC2283A87400EEE61F /* GoodNewsCell.xib in Resources */,
+				743D68D7228943AD00ECBD6E /* BadNewsCell.xib in Resources */,
 				7435C1C02282E73E00EEE61F /* WordCell.xib in Resources */,
 				7435C1CD2282F97200EEE61F /* YDIYGO340.TTF in Resources */,
 				7435C18622828CC800EEE61F /* Assets.xcassets in Resources */,
@@ -411,6 +418,7 @@
 				7435C1E822840FB500EEE61F /* News.swift in Sources */,
 				7435C1BB2282B9DD00EEE61F /* Word.swift in Sources */,
 				7435C1D12282F98400EEE61F /* Enums.swift in Sources */,
+				743D68D9228943BA00ECBD6E /* BadNewsCell.swift in Sources */,
 				7435C1E622840E7400EEE61F /* NewsCell.swift in Sources */,
 				7435C1B82282B85B00EEE61F /* WordCloudFlowLayout.swift in Sources */,
 				7435C1DE2283B08C00EEE61F /* GoodNewsCell.swift in Sources */,

@@ -52,7 +52,7 @@ extension UIColor {
     }
     
     class var sapphire: UIColor {
-        return UIColor(red: 29, green: 36, blue: 167)
+        return UIColor(red: 30, green: 51, blue: 175)
     }
     
     class var darkSkyBlue: UIColor {
@@ -65,6 +65,10 @@ extension UIColor {
     
     class var orange: UIColor {
         return UIColor(red: 245, green: 96, blue: 6)
+    }
+    
+    class var warmGrey: UIColor {
+        return UIColor(red: 155, green: 155, blue: 155)
     }
     
 }
@@ -88,11 +92,36 @@ extension CALayer {
 }
 
 extension UIView {
+    enum ViewBorder {
+        case left
+        case right
+        case top
+        case bottom
+    }
+    
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath
         layer.mask = mask
+    }
+    
+    func addBorder(toSide side: ViewBorder, withColor color: UIColor, andThickness thickness: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        
+        switch side {
+        case .left:
+            border.frame = CGRect(x: 0, y: 0, width: thickness, height: frame.height)
+        case .right:
+            border.frame = CGRect(x: frame.width - thickness, y: 0, width: thickness, height: frame.height)
+        case .top:
+            border.frame = CGRect(x: 0, y: 0, width: frame.width, height: thickness)
+        case .bottom:
+            border.frame = CGRect(x: 0, y: frame.height - thickness, width: frame.width, height: thickness)
+        }
+        
+        layer.addSublayer(border)
     }
 }
 

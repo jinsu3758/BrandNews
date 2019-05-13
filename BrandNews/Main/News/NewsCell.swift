@@ -11,5 +11,10 @@ import UIKit
 class NewsCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var companyLabel: UILabel!
+    @IBOutlet weak var bottomView: UIView!
     
+    func fill(_ news: News) {
+        titleLabel.text = news.title
+        companyLabel.text = news.company
+    }
 }

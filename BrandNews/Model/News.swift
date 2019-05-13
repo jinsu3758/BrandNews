@@ -10,10 +10,12 @@ import Foundation
 struct News {
     let title: String
     let content: String
+    let company: String
     
-    init(title: String, content: String) {
+    init(title: String, content: String, company: String) {
         self.title = title
         self.content = content
+        self.company = company
     }
 }
 

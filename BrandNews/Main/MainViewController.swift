@@ -16,8 +16,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var badView: UIView!
     @IBOutlet weak var badGoodView: UIView!
     @IBOutlet weak var newsCollectionView: UICollectionView!
+    @IBOutlet weak var newsCollectionViewHeightConstraint: NSLayoutConstraint!
     
     private var pageVC = UIPageViewController()
+    private var cellHeight: CGFloat = 0
     var newsList: [NewsCard] = []
     
     lazy var pageArray: [UIViewController] = {
@@ -32,27 +34,21 @@ class MainViewController: UIViewController {
         pageVC.delegate = self
         pageVC.dataSource = self
         pageControl.currentPage = pageArray.count
-        newsCollectionView.register(UINib(nibName: "GoodNewsCell", bundle: nil), forCellWithReuseIdentifier: "mainNewsCell")
+        newsCollectionView.register(UINib(nibName: "GoodNewsCell", bundle: nil), forCellWithReuseIdentifier: "goodNewsCell")
+        newsCollectionView.register(UINib(nibName: "BadNewsCell", bundle: nil), forCellWithReuseIdentifier: "badNewsCell")
         if let flowLayout = newsCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         }
         newsCollectionView.delegate = self
         newsCollectionView.dataSource = self
+        
+        let list = [News(title: "ee", content: "ee", company: "ee"), News(title: "ee", content: "ee", company: "ee"),
+        News(title: "ee", content: "ee", company: "ee"), News(title: "ee", content: "ee", company: "ee")]
+        let cardList = [NewsCard(list: list, isGood: true), NewsCard(list: list, isGood: false), NewsCard(list: list, isGood: true)]
+        newsList = cardList
+        newsCollectionView.reloadData()
+        newsCollectionViewHeightConstraint.constant = newsCollectionView.collectionViewLayout.collectionViewContentSize.height
     }
-    
-//    override func viewDidLayoutSubviews() {
-//        let goodGradientLayer = CAGradientLayer()
-//        let badGradientLayer = CAGradientLayer()
-//        goodGradientLayer.cornerRadius = 10
-//        badGradientLayer.cornerRadius = 10
-//        goodGradientLayer.frame = goodView.bounds
-//        goodGradientLayer.colors = [UIColor.sapphire.cgColor, UIColor.darkSkyBlue.cgColor]
-//        badGradientLayer.frame = badView.bounds
-//        badGradientLayer.colors = [UIColor.vermillion.cgColor, UIColor.orange.cgColor]
-//        goodView.layer.addSublayer(goodGradientLayer)
-//        badView.layer.addSublayer(badGradientLayer)
-//        goodView.layer.cornerRadius = 10
-//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let container = segue.destination as? UIPageViewController {
@@ -108,11 +104,37 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mainNewsCell", for: indexPath)
-        if let goodCell = cell as? GoodNewsCell {
-            goodCell
+        if newsList[indexPath.item].isGood, let goodCell = collectionView.dequeueReusableCell(withReuseIdentifier: "goodNewsCell", for: indexPath) as? GoodNewsCell {
+            goodCell.fill(list: newsList[indexPath.item].list)
+            return goodCell
         }
+        else if let badCell = collectionView.dequeueReusableCell(withReuseIdentifier: "badNewsCell", for: indexPath) as? BadNewsCell {
+            badCell.fill(list: newsList[indexPath.item].list)
+            return badCell
+        }
+      
+        return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+//        let edgeInset = self.collectionView(collectionView, layout: collectionViewLayout, insetForSectionAt: indexPath.section)
+//        let width = collectionView.frame.width * 304 / 375
+        let newsCount = newsList[indexPath.item].list.count
+        let height = 85.5 + CGFloat(newsCount * 35)
+        return CGSize(width: collectionView.frame.width, height: height)
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 9.5
     }
     
     
 }
+

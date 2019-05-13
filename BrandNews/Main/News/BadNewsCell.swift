@@ -1,19 +1,19 @@
 //
-//  GoodNewsCell.swift
+//  BadNewsCell.swift
 //  BrandNews
 //
-//  Created by 박진수 on 09/05/2019.
+//  Created by 박진수 on 13/05/2019.
 //  Copyright © 2019 박진수. All rights reserved.
 //
 
 import UIKit
 
-
-class GoodNewsCell: UICollectionViewCell {
-    @IBOutlet weak var leftView: UIView!
-    @IBOutlet weak var newsCollectionView: UICollectionView!
+class BadNewsCell: UICollectionViewCell {
     @IBOutlet weak var dateLabel: UILabel!
-    //    @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var rightView: UIView!
+    @IBOutlet weak var newsCollectionView: UICollectionView!
+    
+    
     var newsList: [News] = []
     
     private let gradient = CAGradientLayer()
@@ -23,28 +23,24 @@ class GoodNewsCell: UICollectionViewCell {
         
         newsCollectionView.register(UINib(nibName: "NewsCell", bundle: nil), forCellWithReuseIdentifier: "newsCell")
         newsCollectionView.register(UINib(nibName: "NewsHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "newsHeader")
-       
         newsCollectionView.delegate = self
         newsCollectionView.dataSource = self
-        
-
     }
-    
     
     func fill(list: [News]) {
         self.newsList = list
-//        self.newsCollectionView.collectionViewLayout.invalidateLayout()
+        self.newsCollectionView.collectionViewLayout.invalidateLayout()
         self.newsCollectionView.reloadData()
         self.newsCollectionView.performBatchUpdates(nil, completion: { [unowned self] _ in
-            self.gradient.frame = self.leftView.bounds
-            self.gradient.colors = [UIColor.sapphire.cgColor, UIColor.darkSkyBlue.cgColor]
-            self.leftView.layer.insertSublayer(self.gradient, at: 0)
+            self.gradient.frame = self.rightView.bounds
+            self.gradient.colors = [UIColor.vermillion.cgColor, UIColor.orange.cgColor]
+            self.rightView.layer.insertSublayer(self.gradient, at: 0)
         })
-        self.newsCollectionView.reloadData()
+        
     }
 }
 
-extension GoodNewsCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension BadNewsCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return newsList.count
     }
@@ -63,7 +59,6 @@ extension GoodNewsCell: UICollectionViewDataSource, UICollectionViewDelegateFlow
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "newsHeader", for: indexPath) as? NewsHeaderView else { fatalError()}
-        header.layoutIfNeeded()
         header.titleLabel.text = "와우"
         header.contentLabel.text = "ee"
         return header
@@ -80,6 +75,4 @@ extension GoodNewsCell: UICollectionViewDataSource, UICollectionViewDelegateFlow
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
-    
-    
 }
