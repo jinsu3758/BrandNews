@@ -122,12 +122,11 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
 //        let width = collectionView.frame.width * 304 / 375
         let newsCount = newsList[indexPath.item].list.count
         let height = 85.5 + CGFloat(newsCount * 35)
-        return CGSize(width: collectionView.frame.width, height: height)
+        return CGSize(width: 321, height: height)
         
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     

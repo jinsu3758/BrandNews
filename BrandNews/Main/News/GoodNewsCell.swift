@@ -13,14 +13,13 @@ class GoodNewsCell: UICollectionViewCell {
     @IBOutlet weak var leftView: UIView!
     @IBOutlet weak var newsCollectionView: UICollectionView!
     @IBOutlet weak var dateLabel: UILabel!
-    //    @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
     var newsList: [News] = []
     
     private let gradient = CAGradientLayer()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+//        self.contentView.translatesAutoresizingMaskIntoConstraints = false
         newsCollectionView.register(UINib(nibName: "NewsCell", bundle: nil), forCellWithReuseIdentifier: "newsCell")
         newsCollectionView.register(UINib(nibName: "NewsHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "newsHeader")
        

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,14 +41,14 @@
                                 <constraint firstAttribute="height" constant="0.5" id="an2-13-h8i"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="네이버, LG유플러스와 AI기술로 사회적약자 돕는다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvh-aF-oQG">
-                            <rect key="frame" x="94.5" y="9" width="183" height="26"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="네이버, LG유플러스와 AI기술로 사회적약자 돕는다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvh-aF-oQG">
+                            <rect key="frame" x="94.5" y="9" width="183" height="27.5"/>
                             <fontDescription key="fontDescription" name="YDIYGO360" family="YDIYGO360" pointSize="11.800000190734863"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="네이버는 사회적 약자도 AI 기술 서비스를 쉽게 이용할 수 있도록 LG유플러스와 함께 지난해..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JL5-Zh-F3v">
-                            <rect key="frame" x="94.5" y="40.5" width="183" height="21"/>
+                            <rect key="frame" x="94.5" y="42" width="183" height="23.5"/>
                             <fontDescription key="fontDescription" name="YDIYGO310" family="YDIYGO310" pointSize="10"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                         <constraint firstItem="vvh-aF-oQG" firstAttribute="top" secondItem="BiP-jW-DRn" secondAttribute="top" constant="9" id="fSX-CM-Xdv"/>
                         <constraint firstItem="xTb-Bg-pM3" firstAttribute="leading" secondItem="BiP-jW-DRn" secondAttribute="leading" constant="7" id="fUZ-CV-shw"/>
                         <constraint firstItem="JL5-Zh-F3v" firstAttribute="leading" secondItem="xTb-Bg-pM3" secondAttribute="trailing" constant="4.5" id="gvo-yB-fT4"/>
-                        <constraint firstItem="PBb-ZP-Fau" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JL5-Zh-F3v" secondAttribute="bottom" constant="7.5" id="mCC-H4-evf"/>
+                        <constraint firstItem="PBb-ZP-Fau" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JL5-Zh-F3v" secondAttribute="bottom" constant="7" id="lrM-0T-sCS"/>
                         <constraint firstItem="PBb-ZP-Fau" firstAttribute="top" secondItem="xTb-Bg-pM3" secondAttribute="bottom" constant="7" id="oKv-1y-Cso"/>
                         <constraint firstItem="xTb-Bg-pM3" firstAttribute="top" secondItem="BiP-jW-DRn" secondAttribute="top" constant="8" id="piW-8r-hOa"/>
                     </constraints>
@@ -90,6 +90,6 @@
         </view>
     </objects>
     <resources>
-        <image name="newsImg" width="83" height="57.5"/>
+        <image name="newsImg" width="83" height="57"/>
     </resources>
 </document>

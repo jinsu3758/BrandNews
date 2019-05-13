@@ -20,9 +20,10 @@ class BadNewsCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        newsCollectionView.register(UINib(nibName: "NewsCell", bundle: nil), forCellWithReuseIdentifier: "newsCell")
+//        self.contentView.translatesAutoresizingMaskIntoConstraints = false
+    newsCollectionView.register(UINib(nibName: "NewsCell", bundle: nil), forCellWithReuseIdentifier: "newsCell")
         newsCollectionView.register(UINib(nibName: "NewsHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "newsHeader")
+        
         newsCollectionView.delegate = self
         newsCollectionView.dataSource = self
     }
@@ -36,6 +37,7 @@ class BadNewsCell: UICollectionViewCell {
             self.gradient.colors = [UIColor.vermillion.cgColor, UIColor.orange.cgColor]
             self.rightView.layer.insertSublayer(self.gradient, at: 0)
         })
+        self.newsCollectionView.reloadData()
         
     }
 }
@@ -59,17 +61,18 @@ extension BadNewsCell: UICollectionViewDataSource, UICollectionViewDelegateFlowL
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "newsHeader", for: indexPath) as? NewsHeaderView else { fatalError()}
+        header.layoutIfNeeded()
         header.titleLabel.text = "와우"
         header.contentLabel.text = "ee"
         return header
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 35)
+        return CGSize(width: 296, height: 35)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 72)
+        return CGSize(width: 294, height: 72)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
