@@ -8,12 +8,17 @@
 
 import Foundation
 
+enum WordCategory {
+    case good
+    case bad
+    case place
+    case institute
+    case person
+    case rest
+}
+
 struct Word {
     let sentence: String
     let frequency: Int
-    
-    init(sentence: String, frequency: Int) {
-        self.sentence = sentence
-        self.frequency = frequency
-    }
+    let category: WordCategory
 }

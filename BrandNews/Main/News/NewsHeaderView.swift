@@ -9,7 +9,7 @@
 import UIKit
 
 class NewsHeaderView: UICollectionReusableView {
-    @IBOutlet weak var newImg: UIImageView!
+    @IBOutlet weak var newsImg: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     

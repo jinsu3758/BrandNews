@@ -8,6 +8,8 @@
 
 import Foundation
 struct NewsCard {
+    let header: News
     let list: [News]
     let isGood: Bool
+    let num: Int
 }

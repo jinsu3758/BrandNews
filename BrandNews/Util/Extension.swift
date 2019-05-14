@@ -71,6 +71,14 @@ extension UIColor {
         return UIColor(red: 155, green: 155, blue: 155)
     }
     
+    class var turquoise: UIColor {
+        return UIColor(red: 0, green: 172, blue: 172)
+    }
+    
+    class var sapphireTwo: UIColor {
+        return UIColor(red: 29, green: 37, blue: 167)
+    }
+    
 }
 
 extension CALayer {

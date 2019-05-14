@@ -42,12 +42,25 @@ class MainViewController: UIViewController {
         newsCollectionView.delegate = self
         newsCollectionView.dataSource = self
         
-        let list = [News(title: "ee", content: "ee", company: "ee"), News(title: "ee", content: "ee", company: "ee"),
-        News(title: "ee", content: "ee", company: "ee"), News(title: "ee", content: "ee", company: "ee")]
-        let cardList = [NewsCard(list: list, isGood: true), NewsCard(list: list, isGood: false), NewsCard(list: list, isGood: true)]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        let header1 = News(title: "네이버, LG유플러스와 AI기술로 사회적약자 돕는다", content: "네이버는 사회적 약자도 AI 기술 서비스를 쉽게 이용할 수 있도록 LG유플러스와 함께 지난해..", company: "네이버")
+        let list1 = [News(title: "네이버, LG U+, 지체장애인 300명 AI 스피커 지원", content: "ee", company: "데이터넷"), News(title: "네이버와 LG U+, 지체장애인에게 음원이용권 전달", content: "ee", company: "대한금융지원")]
+        
+        let header2 = News(title: "구매직원 36억 횡령까지… 네이버에 무슨일이..", content: "인터넷업계 최강자 네이버가 흔들리고 있다. 네이버 창업 직후부터 일해 온 주요 임원들이...", company: "네이버")
+        let list2 = [News(title: "회삿돈으로 호화 요트 구입 혐의’ CJ 이재환 대표 불구속 송치", content: "ee", company: "네이버뉴스"), News(title: "NHN, 총체적 위기 직면..", content: "ee", company: "아이뉴스24")]
+        
+        let header3 = News(title: "서울시-네이버, '교통약자·따릉이 길찾기 서비스' 개발", content: "네이버가 기존에 서비스하고 있는 최단시간, 최소 환승 중심 대중교통 경로 안내와 별도로 노약자나 장애인, 영유아 동반자, 무거운 짐을 든 관광객 등 '교통약자'를 위한 맞춤형 길찾기 및 내비게이션 기능을 네이버 교통안내 시스템에 추가한다", company: "네이버")
+        let list3 = [News(title: "서울시+네이버, 교통약자·따릉이 길찾기 서비스 만든다", content: "뉴스토마토", company: "뉴스토마토"), News(title: "서울시-네이버 손잡고 교통약자·따릉이 길찾기 서비스 개발", content: "ee", company: "위클리오늘")]
+        
+        let cardList = [NewsCard(header: header1, list: list1, isGood: true, num: 1), NewsCard(header: header2, list: list2, isGood: false, num: 2), NewsCard(header: header3, list: list3, isGood: true, num: 3) ]
         newsList = cardList
         newsCollectionView.reloadData()
         newsCollectionViewHeightConstraint.constant = newsCollectionView.collectionViewLayout.collectionViewContentSize.height
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -105,11 +118,11 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if newsList[indexPath.item].isGood, let goodCell = collectionView.dequeueReusableCell(withReuseIdentifier: "goodNewsCell", for: indexPath) as? GoodNewsCell {
-            goodCell.fill(list: newsList[indexPath.item].list)
+            goodCell.fill(news: newsList[indexPath.item])
             return goodCell
         }
         else if let badCell = collectionView.dequeueReusableCell(withReuseIdentifier: "badNewsCell", for: indexPath) as? BadNewsCell {
-            badCell.fill(list: newsList[indexPath.item].list)
+            badCell.fill(news: newsList[indexPath.item])
             return badCell
         }
       

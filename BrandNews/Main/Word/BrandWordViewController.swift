@@ -27,18 +27,20 @@ class BrandWordViewController: UIViewController {
     }
     
     private func setList() {
-        wordList.append(Word(sentence: "ee", frequency: 100))
-        wordList.append(Word(sentence: "wer", frequency: 50))
-        wordList.append(Word(sentence: "ewrq", frequency: 10))
-        wordList.append(Word(sentence: "fsre1", frequency: 30))
-        wordList.append(Word(sentence: "324", frequency: 70))
-        wordList.append(Word(sentence: "ewrq", frequency: 120))
-        wordList.append(Word(sentence: "fsre1", frequency: 10))
-        wordList.append(Word(sentence: "324", frequency: 180))
-        wordList.append(Word(sentence: "324", frequency: 120))
-        wordList.append(Word(sentence: "ewrq", frequency: 10))
-        wordList.append(Word(sentence: "fsre1", frequency: 30))
-        wordList.append(Word(sentence: "324", frequency: 70))
+        wordList.append(Word(sentence: "카카오톡", frequency: 100, category: .institute))
+        wordList.append(Word(sentence: "판교", frequency: 50, category: .place))
+        wordList.append(Word(sentence: "한성숙", frequency: 10, category: .person))
+        wordList.append(Word(sentence: "라이브러리", frequency: 30, category: .rest))
+        wordList.append(Word(sentence: "iOS", frequency: 70, category: .rest))
+        wordList.append(Word(sentence: "송창현", frequency: 120, category: .person))
+        wordList.append(Word(sentence: "일본", frequency: 10, category: .place))
+        wordList.append(Word(sentence: "쿠팡", frequency: 180, category: .institute))
+        wordList.append(Word(sentence: "배달의민족", frequency: 50, category: .institute))
+        wordList.append(Word(sentence: "게임", frequency: 10, category: .rest))
+        wordList.append(Word(sentence: "노래", frequency: 30, category: .rest))
+        wordList.append(Word(sentence: "기안84", frequency: 70, category: .person))
+        wordList.append(Word(sentence: "서울", frequency: 190, category: .place))
+        wordList.append(Word(sentence: "네이버웹툰", frequency: 50, category: .institute))
         wordCollectionView.reloadData()
     }
     

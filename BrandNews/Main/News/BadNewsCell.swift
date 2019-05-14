@@ -13,9 +13,9 @@ class BadNewsCell: UICollectionViewCell {
     @IBOutlet weak var rightView: UIView!
     @IBOutlet weak var newsCollectionView: UICollectionView!
     
-    
     var newsList: [News] = []
-    
+    var mainNews: News?
+    var newsNum: Int = 0
     private let gradient = CAGradientLayer()
     
     override func awakeFromNib() {
@@ -26,10 +26,13 @@ class BadNewsCell: UICollectionViewCell {
         
         newsCollectionView.delegate = self
         newsCollectionView.dataSource = self
+        newsCollectionView.layer.setShadow(color: .veryDarkBrown7, alpha: 1, x: 0, y: 0, blur: 4, spread: 1.1)
     }
     
-    func fill(list: [News]) {
-        self.newsList = list
+    func fill(news: NewsCard) {
+        self.newsList = news.list
+        self.mainNews = news.header
+        newsNum = news.num
         self.newsCollectionView.collectionViewLayout.invalidateLayout()
         self.newsCollectionView.reloadData()
         self.newsCollectionView.performBatchUpdates(nil, completion: { [unowned self] _ in
@@ -62,8 +65,9 @@ extension BadNewsCell: UICollectionViewDataSource, UICollectionViewDelegateFlowL
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "newsHeader", for: indexPath) as? NewsHeaderView else { fatalError()}
         header.layoutIfNeeded()
-        header.titleLabel.text = "와우"
-        header.contentLabel.text = "ee"
+        header.titleLabel.text = mainNews!.title
+        header.contentLabel.text = mainNews!.content
+        header.newsImg.image = UIImage(named: "naver" + String(newsNum))
         return header
     }
     

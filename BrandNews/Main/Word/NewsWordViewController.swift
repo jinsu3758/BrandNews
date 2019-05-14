@@ -27,18 +27,18 @@ class NewsWordViewController: UIViewController {
     }
     
     private func setList() {
-        wordList.append(Word(sentence: "ee", frequency: 100))
-        wordList.append(Word(sentence: "wer", frequency: 50))
-        wordList.append(Word(sentence: "ewrq", frequency: 10))
-        wordList.append(Word(sentence: "fsre1", frequency: 30))
-        wordList.append(Word(sentence: "324", frequency: 70))
-        wordList.append(Word(sentence: "ewrq", frequency: 120))
-        wordList.append(Word(sentence: "fsre1", frequency: 10))
-        wordList.append(Word(sentence: "324", frequency: 180))
-        wordList.append(Word(sentence: "324", frequency: 120))
-        wordList.append(Word(sentence: "ewrq", frequency: 10))
-        wordList.append(Word(sentence: "fsre1", frequency: 30))
-        wordList.append(Word(sentence: "324", frequency: 70))
+        wordList.append(Word(sentence: "선행", frequency: 110, category: .good))
+        wordList.append(Word(sentence: "송치", frequency: 120, category: .bad))
+        wordList.append(Word(sentence: "공헌", frequency: 10, category: .good))
+        wordList.append(Word(sentence: "연탄봉사", frequency: 180, category: .good))
+        wordList.append(Word(sentence: "폭행", frequency: 30, category: .bad))
+        wordList.append(Word(sentence: "기부", frequency: 200, category: .good))
+        wordList.append(Word(sentence: "봉사", frequency: 30, category: .good))
+        wordList.append(Word(sentence: "입막음", frequency: 10, category: .bad))
+        wordList.append(Word(sentence: "위조", frequency: 70, category: .bad))
+        wordList.append(Word(sentence: "횡령", frequency: 120, category: .bad))
+        wordList.append(Word(sentence: "자선기부", frequency: 10, category: .good))
+        wordList.append(Word(sentence: "지원", frequency: 70, category: .bad))
         wordCollectionView.reloadData()
     }
 
